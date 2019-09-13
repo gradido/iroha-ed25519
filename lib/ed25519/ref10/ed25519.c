@@ -5,10 +5,10 @@
 #include "sc.h"
 
 ED25519_EXPORT int ed25519_create_keypair(private_key_t *sk, public_key_t *pk) {
-  if (!randombytes(sk->data, ed25519_privkey_SIZE))
+  //if (!randombytes(sk->data, ed25519_privkey_SIZE))
     return ED25519_ERROR;            /* RNG failed, not enough entropy */
-  ed25519_derive_public_key(sk, pk); /* fill with data */
-  return ED25519_SUCCESS;            /* ok */
+  //ed25519_derive_public_key(sk, pk); /* fill with data */
+  //return ED25519_SUCCESS;            /* ok */
 }
 
 ED25519_EXPORT void ed25519_derive_public_key(const private_key_t *sk, public_key_t *pk) {
